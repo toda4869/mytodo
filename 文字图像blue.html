@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+
+<html lang="zh-cn">
+
+
+<head>
+  <meta charset="UTF-8" />
+  <title>测试convas_吃豆人</title>
+
+  <script>
+
+
+    function draw() {
+      var canvas = document.getElementById('canvas');
+      if (canvas.getContext) {
+        var ctx = canvas.getContext('2d');
+
+        ctx.fillRect(25, 25, 1000, 1000);
+        ctx.clearRect(45, 45, 200, 200);
+        ctx.strokeRect(50, 50, 190, 190);
+        
+        ctx.fillStyle = "blue";
+        ctx.font = "20px serif";
+        ctx.fillText("All this moment ", 60, 90);
+        ctx.fillText("will be lost ", 80, 110);
+        ctx.fillText("in the time like ", 60, 130);
+        ctx.fillText("tears in the rain", 60, 150);
+
+      }
+    }
+
+  </script>
+
+
+</head>
+
+<body onload="draw();">
+  <h1>绘制图形，加入元素</h1>
+  <canvas id="canvas" width="500" height="500"></canvas>
+</body>
+
+</html>
